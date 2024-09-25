@@ -24,7 +24,7 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
                             >{{page.informations.email}}</a></p>
                     <div class="mt-10 flex justify-center lg:justify-end">
                         <UButton v-if="page.informations.link.x" icon="i-simple-icons-x" size="xl" color="gray" variant="ghost"
-                            :to="page.informations.x" target="_blank" />
+                            :to="page.informations.link.x" target="_blank" />
                         <UButton v-if="page.informations.link.linkedin" icon="i-simple-icons-linkedin" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.linkedin" target="_blank" />
                         <UButton v-if="page.informations.link.instagram" icon="i-simple-icons-instagram" size="xl" color="gray" variant="ghost"
