@@ -2,16 +2,20 @@
 const route = useRoute()
 import { withoutTrailingSlash } from 'ufo'
 
+const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
+
 const links = [{
   label: 'Home',
   icon: 'i-heroicons-home',
   to: '/'
 }, {
-  label: 'Project',
+  label: 'Projects',
+  to: '/#projects',
   icon: 'i-heroicons-square-3-stack-3d'
+}, {
+  label: page.value.title,
 }]
 
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
 
 const headline = computed(() => findPageHeadline(page.value))
 
@@ -28,7 +32,6 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
     <UPageHeader v-bind="page" :headline="headline">
       <template #headline>
         <UBreadcrumb :links="links" />
-
       </template>
     </UPageHeader>
     <!-- <UPageBody prose>

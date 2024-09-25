@@ -28,15 +28,15 @@ const { data: projects } = await useAsyncData('projets', () => queryContent('/pr
                 facilitating informed decision-making processes.
             </p>
             <div class="flex gap-4">
-                <UButton icon="i-pepicons-pop-cv" color="black" to="/pdf/CV_Pierre_Graef.pdf" size="xl" label="My CV" />
+                <UButton icon="i-pepicons-pop-cv" :external="true" color="black" to="/pdf/CV_Pierre_Graef.pdf" size="xl" label="My CV" />
 
                 <UButton icon="i-material-symbols-mail" to="mailto:pierre.graef@gmail.com" size="xl" label="Contact Me" />
 
             </div>
 
         </div>
-        <UDivider class="py-20"/>
-        <div class="mb-20">
+        <UDivider class="py-20" id="projects"/>
+        <div class="mb-10 md:mb-20">
             <h2 class="text-4xl font-bold mb-10">Projects</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <UBlogPost v-for="(project, index) in projects" :key="index" :title="project.title" :to="project._path" :badge="project.badge"
