@@ -7,8 +7,6 @@ const { data: projects } = await useAsyncData('projets', () => queryContent('/pr
 
 const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne())
 
-console.log(page.value)
-
 useSeoMeta({
   title: page.value?.title,
   ogTitle: page.value?.title,
