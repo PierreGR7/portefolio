@@ -18,17 +18,17 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
                         alt="">
                 </NuxtLink>
                 <div>
-                    <h2 class=" text-4xl font-bold text-nowrap">Pierre Graef</h2>
-                    <p class="text-center lg:text-right text-lg"><a
-                            >pierre.graef@gmail.com</a></p>
+                    <h2 class=" text-4xl font-bold text-nowrap">{{ page.informations.name }}</h2>
+                    <p class="text-center lg:text-right text-lg"><a :href="'mailto:' + page.informations.email"
+                            >{{page.informations.email}}</a></p>
                     <div class="mt-10 flex justify-center lg:justify-end">
-                        <UButton icon="i-simple-icons-x" size="xl" color="gray" variant="ghost"
+                        <UButton v-if="page.informations.link.x" icon="i-simple-icons-x" size="xl" color="gray" variant="ghost"
                             :to="page.informations.x" target="_blank" />
-                        <UButton icon="i-simple-icons-linkedin" size="xl" color="gray" variant="ghost"
+                        <UButton v-if="page.informations.link.linkedin" icon="i-simple-icons-linkedin" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.linkedin" target="_blank" />
-                        <UButton icon="i-simple-icons-instagram" size="xl" color="gray" variant="ghost"
+                        <UButton v-if="page.informations.link.instagram" icon="i-simple-icons-instagram" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.instagram" target="_blank" />
-                        <UButton icon="i-simple-icons-github" size="xl" color="gray" variant="ghost"
+                        <UButton v-if="page.informations.link.github" icon="i-simple-icons-github" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.github" target="_blank" />
 
                     </div>
