@@ -1,3 +1,9 @@
+<script setup>
+
+const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne())
+
+</script>
+
 <template>
     <div class="overflow-x-hidden">
         <div
@@ -6,22 +12,24 @@
                 class="absolute inset-0 landing-grid z-[0] [mask-image:radial-gradient(100%_100%_at_top_left,white,transparent)]" />
             <UColorModeToggle class="absolute top-4 max-lg:right-4 lg:left-4" />
             <div class="max-w-sm mt-10 lg:mt-28 z-[1]">
-                <img class="w-40 rounded-full max-lg:mx-auto lg:ml-auto mb-8"
-                    src="https://media.licdn.com/dms/image/v2/D4E03AQF53CxzwgSGZA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1672141377864?e=1732752000&v=beta&t=Har4AHtan0n3-iRznV47ohhoi5MGUIAU749Bx6DpGaw"
-                    alt="">
+                <NuxtLink to="/">
+                    <img class="w-40 rounded-full max-lg:mx-auto lg:ml-auto mb-8"
+                    :src="page.information.profile"
+                        alt="">
+                </NuxtLink>
                 <div>
                     <h2 class=" text-4xl font-bold text-nowrap">Pierre Graef</h2>
                     <p class="text-center lg:text-right text-lg"><a
-                            href="mailto:pierre.graef@gmail.com">pierre.graef@gmail.com</a></p>
+                            >pierre.graef@gmail.com</a></p>
                     <div class="mt-10 flex justify-center lg:justify-end">
                         <UButton icon="i-simple-icons-x" size="xl" color="gray" variant="ghost"
-                            to="https://x.com/nicohrte/" target="_blank" />
+                            :to="page.informations.x" target="_blank" />
                         <UButton icon="i-simple-icons-linkedin" size="xl" color="gray" variant="ghost"
-                            to="https://www.linkedin.com/in/nicolas-harter-b34913207/" target="_blank" />
+                            :to="page.informations.link.linkedin" target="_blank" />
                         <UButton icon="i-simple-icons-instagram" size="xl" color="gray" variant="ghost"
-                            to="https://github.com/NicolasHrt" target="_blank" />
+                            :to="page.informations.link.instagram" target="_blank" />
                         <UButton icon="i-simple-icons-github" size="xl" color="gray" variant="ghost"
-                            to="https://github.com/NicolasHrt" target="_blank" />
+                            :to="page.informations.link.github" target="_blank" />
 
                     </div>
                 </div>
