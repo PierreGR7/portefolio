@@ -14,7 +14,7 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
             <div class="max-w-sm mt-10 lg:mt-28 z-[1]">
                 <NuxtLink to="/">
                     <img class="w-40 rounded-full max-lg:mx-auto lg:ml-auto mb-8"
-                    :src="page.information.profile"
+                    :src="page.informations.profile.url"
                         alt="">
                 </NuxtLink>
                 <div>
