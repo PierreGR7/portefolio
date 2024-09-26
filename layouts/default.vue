@@ -11,7 +11,7 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
             <div
                 class="absolute inset-0 landing-grid z-[0] [mask-image:radial-gradient(100%_100%_at_top_left,white,transparent)]" />
             <UColorModeToggle class="absolute top-4 max-lg:right-4 lg:left-4" />
-            <div class="max-w-sm mt-10 lg:mt-28 z-[1]">
+            <div class="max-w-sm mt-6 lg:mt-28 z-[1]">
                 <NuxtLink to="/">
                     <img class="w-40 rounded-full max-lg:mx-auto lg:ml-auto mb-8"
                     :src="page.informations.profile.url"
