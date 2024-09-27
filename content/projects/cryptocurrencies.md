@@ -13,6 +13,13 @@ badge:
   label: Economy, Information Technology
 ---
 
+::latex{latex="\[la 2 + b^2 = c 2\]"}
+::
+::latex{latex="\[la 2 + b = c 2\]"}
+::
+
+
+
 In recent years, cryptocurrencies have emerged as a disruptive force in the world of finance and economics. Born out of the decentralized ethos of blockchain technology, cryptocurrencies have challenged traditional financial systems, offering new avenues for investment, transactions, and economic empowerment. This article explores the impact of cryptocurrencies on the economy and finance, examining their evolution, opportunities, and challenges.
 
 ![computer](https://picsum.photos/id/3/1000/600){ width="1000" height="600" .rounded-lg }
