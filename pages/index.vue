@@ -31,7 +31,7 @@ useSeoMeta({
             </p>
             <div class="flex gap-4">
                 <UButton icon="i-pepicons-pop-cv" :external="true" color="black" to="/pdf/CV_Pierre_Graef.pdf" size="xl"
-                    label="My CV" />
+                    label="My CV" target="_blank" />
 
                 <UButton icon="i-material-symbols-mail" :to="`mailto:${page.informations.email}`" size="xl"
                     label="Contact Me" />
