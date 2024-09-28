@@ -7,7 +7,7 @@ authors:
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
-  src: public/img/cover_image.png
+  src: /img/cover_image.png
 date: 2024-08-25T00:00:00.000Z
 badge:
   label: Market strategy, Visualization, Prediction
