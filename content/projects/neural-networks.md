@@ -6,19 +6,12 @@ authors:
     to: https://twitter.com/benjamincanac
     avatar:
       src: https://i.pravatar.cc/128?u=2
+image:
+  src: img/cover_neural_networks.png
 date: 2024-09-25T00:00:00.000Z
 badge:
   label: Machine Learning, Mathematics, Data Science
 ---
-
-## Test 
-
-::inline
-An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
-::latex{latex="\(\sigma(x) = \frac{1}{1 + e^{-x}} \)"}
-::
-An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
-::
 
 ## Neural Networks: A Technical Overview
 
@@ -36,52 +29,67 @@ A neural network is composed of several layers:
 
 An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
 
-- **Sigmoid**:
-
-::latex{latex="\[\sigma(x) = \frac{1}{1 + e^{-x}} \]"}
-::
-
-It constrains outputs between 0 and 1, but suffers from saturation at extreme values.
-
-- **ReLU (Rectified Linear Unit)**::latex{latex="\[f(x) = \max(0, x)]"}\:brIt's simple to compute and helps avoid gradient saturation issues, but it may cause "dead" neurons.
-- **Tanh (Hyperbolic Tangent)**::latex{latex="\[\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}]"}\:brValues range between -1 and 1, but like sigmoid, it can also saturate.
+- **Sigmoid**:latex{latex="\[\sigma(x) = \frac{1}{1 + e^{-x}} \]"} It constrains outputs between 0 and 1, but suffers from saturation at extreme values.
+- **ReLU (Rectified Linear Unit)**:latex{latex="\[f(x) = \max(0, x)\]"}It's simple to compute and helps avoid gradient saturation issues, but it may cause "dead" neurons.
+- **Tanh (Hyperbolic Tangent)**:latex{latex="\[\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\]"}Values range between -1 and 1, but like sigmoid, it can also saturate.
 
 ### 3. Learning Algorithm: Backpropagation
 
 Training a neural network involves using the backpropagation algorithm. This process relies on computing the gradient of the errors with respect to the network's weights through the **gradient descent** algorithm. Here are the main steps:
 
-1. **Forward pass**: The data passes through the network layer by layer, and the output is calculated.
-2. **Error calculation**: A loss function\:latex{latex="\[J(\theta)]"}
+- **Forward pass:**  The data passes through the network layer by layer, and the output is calculated.
 
-, such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance:
-
-::latex{latex="\[J(\theta) = \frac{1}{n} \sum\_^{n} (y\_i - \hat{y}\_i)^2\]"}
+::inline
+* **Error calculation**: A loss function\:latex{latex="(J(\theta))"}, such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance, where\:latex{latex="(y\_i)"}is the true value, and\:latex{latex="(\hat{y}\_i )"}is the prediction :
 ::
 
-where (y\_i) is the true value, and (\hat{y}\_i) is the prediction.
+::latex{latex="\[J(\theta) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2\]"}
+::
 
-3. **Backpropagation**: Through differentiation, the gradient of the loss function is computed for each weight using the **chain rule**::latex{latex="\[\frac{\partial J}{\partial w\_} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z\_j} \cdot \frac{\partial z\_j}{\partial w\_}]"}\:brThese gradients are then used to update the weights using gradient descent::latex{latex="\[w = w - \eta \cdot \nabla J(w)]"}\:brwhere\:latex{latex="\[\eta]"}\:bris the learning rate.
-
-### 4. Common Problems and Solutions
-
-- **Overfitting**: This occurs when the model learns the training data too well, at the cost of generalization. Techniques such as **L2 regularization** (Ridge) or **Dropout** are often used to mitigate this.
-
-**L2 Regularization**:
+- **Backpropagation**: Through differentiation, the gradient of the loss function is computed for each weight using the **chain rule** :
 
 ::latex
 ---
-latex: \[J\_{\text{reg}}(\theta) = J(\theta) + \lambda \sum\_^{n} \theta\_j^2\]
+latex: \[ \frac{\partial J}{\partial w_{ij}} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z_j} \cdot \frac{\partial z_j}{\partial w_{ij}} \]
 ---
 ::
 
-where
+These gradients are then used to update the weights using gradient descent:
 
-::latex{latex="\[\lambda\]"}
+::latex{latex="\[w = w - \eta \cdot \nabla J(w)\]"}
 ::
 
-is a hyperparameter controlling the regularization penalty.
+::inline
+where
 
-- **Vanishing Gradients**: In deep networks, gradients can become extremely small, slowing down training. Activation functions like ReLU or techniques like **batch normalization** can mitigate this issue.
+  :::latex{latex="\(\eta\)"}
+  :::
+
+is the learning rate.
+::
+
+### 4. Common Problems and Solutions
+
+**Overfitting**: This occurs when the model learns the training data too well, at the cost of generalization. Techniques such as **L2 regularization** (Ridge) or **Dropout** are often used to mitigate this.
+
+L2 Regularization:
+
+::latex
+---
+latex: \[ J_{\text{reg}}(\theta) = J(\theta) + \lambda \sum_{j=1}^{n} \theta_j^2 \]
+---
+::
+
+::inline
+where
+
+  :::latex{latex="\(\lambda\)"}
+  :::
+
+is a hyperparameter controlling the regularization penalty.
+::
+
+**Vanishing Gradients**: In deep networks, gradients can become extremely small, slowing down training. Activation functions like ReLU or techniques like **batch normalization** can mitigate this issue.
 
 ### 5. Advanced Network Architectures
 
@@ -91,7 +99,7 @@ The convolution operation is defined as:
 
 ::latex
 ---
-latex: \[(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau) d\tau\]
+latex: \[ (f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau) d\tau \]
 ---
 ::
 
@@ -104,17 +112,29 @@ A simple RNN, the state update is given by:
 ::latex{latex="\[h_t = \sigma(W_h h_{t-1} + W_x x_t + b)\]"}
 ::
 
+::inline
 where
 
-::latex{latex="\[h_t\]"}
+  :::latex{latex="\(h_t\)"}
+  :::
+
+is the hidden state at time
+
+  :::latex{latex="\(t\)"}
+  :::
+
+, and
+
+  :::latex{latex="\(x_t\)"}
+  :::
+
+is the input at time
+
+  :::latex{latex="\(t\)"}
+  :::
+
+.
 ::
-
-is the hidden state at time (t), and
-
-::latex{latex="\[x_t\]"}
-::
-
-is the input at time (t).
 
 ## Conclusion
 

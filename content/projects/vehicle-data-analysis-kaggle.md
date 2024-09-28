@@ -15,7 +15,7 @@ badge:
 
 In this project, I will analyze a [vehicle dataset available on Kaggle](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho){:target="_blank"}, focusing on exploring market trends through data visualization and developing a predictive model using training and test datasets.
 
-You can check, download and modify my code on kaggle at the following links:
+You can check, download and modify my code on Kaggle at the following links:
 
 [Visualizations : What is the best market strategy](https://www.kaggle.com/code/pierregraef/data-analysis-visualization-predict-linear-reg){:target="_blank"}
 
