@@ -25,7 +25,12 @@ A neural network is composed of several layers:
 
 ### 2. Activation Functions
 
+::inline
 An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
+::latex{latex="\(\sigma(x) = \frac{1}{1 + e^{-x}} \)"}
+::
+An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
+::
 
 - **Sigmoid**:
 
@@ -46,12 +51,12 @@ Training a neural network involves using the backpropagation algorithm. This pro
 
 , such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance:
 
-::latex{latex="\[J(\theta) = \frac{1}{n} \sum\_^{n} (y\_i - \hat{y}\_i)^2\]"}
+::latex{latex="\[J(\theta) = \frac{1}{n} \sum\_^{n} (y_i - \hat{y}\_i)^2\]"}
 ::
 
-where (y\_i) is the true value, and (\hat{y}\_i) is the prediction.
+where (y_i) is the true value, and (\hat{y}\_i) is the prediction.
 
-3. **Backpropagation**: Through differentiation, the gradient of the loss function is computed for each weight using the **chain rule**::latex{latex="\[\frac{\partial J}{\partial w\_} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z\_j} \cdot \frac{\partial z\_j}{\partial w\_}]"}\:brThese gradients are then used to update the weights using gradient descent::latex{latex="\[w = w - \eta \cdot \nabla J(w)]"}\:brwhere\:latex{latex="\[\eta]"}\:bris the learning rate.
+3. **Backpropagation**: Through differentiation, the gradient of the loss function is computed for each weight using the **chain rule**::latex{latex="\[\frac{\partial J}{\partial w\_} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z_j} \cdot \frac{\partial z_j}{\partial w\_}]"}\:brThese gradients are then used to update the weights using gradient descent::latex{latex="\[w = w - \eta \cdot \nabla J(w)]"}\:brwhere\:latex{latex="\[\eta]"}\:bris the learning rate.
 
 ### 4. Common Problems and Solutions
 
@@ -59,10 +64,10 @@ where (y\_i) is the true value, and (\hat{y}\_i) is the prediction.
 
 **L2 Regularization**:
 
-::latex
----
-latex: \[J\_{\text{reg}}(\theta) = J(\theta) + \lambda \sum\_^{n} \theta\_j^2\]
----
+## ::latex
+
+## latex: \[J\_{\text{reg}}(\theta) = J(\theta) + \lambda \sum\_^{n} \theta_j^2\]
+
 ::
 
 where
@@ -80,10 +85,10 @@ is a hyperparameter controlling the regularization penalty.
 
 The convolution operation is defined as:
 
-::latex
----
-latex: \[(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau) d\tau\]
----
+## ::latex
+
+## latex: \[(f \* g)(t) = \int\_{-\infty}^{\infty} f(\tau)g(t - \tau) d\tau\]
+
 ::
 
 In CNNs, this operation is discretized to work with digital images.
@@ -92,7 +97,7 @@ In CNNs, this operation is discretized to work with digital images.
 
 A simple RNN, the state update is given by:
 
-::latex{latex="\[h_t = \sigma(W_h h_{t-1} + W_x x_t + b)\]"}
+::latex{latex="\[h*t = \sigma(W_h h*{t-1} + W_x x_t + b)\]"}
 ::
 
 where

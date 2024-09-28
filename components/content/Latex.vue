@@ -1,8 +1,6 @@
 <!-- components/content/Card.vue -->
 <template>
-  <div class="p-1 text-center" >
-    <div v-html="latex"></div>
-  </div>
+  <span :class="{ 'mx-1': latex.startsWith('\\(') }" v-html="latex"></span>
 </template>
 
 <script setup>
