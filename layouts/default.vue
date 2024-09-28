@@ -22,7 +22,7 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
                     <p class="text-center lg:text-right text-lg hover:text-primary transition">
                         <a :href="'mailto:' + page.informations.email"
                             >{{page.informations.email}}</a></p>
-                    <div class="mt-10 flex justify-center lg:justify-end">
+                    <div class="mt-6 lg:mt-10 flex justify-center lg:justify-end">
                         <UButton v-if="page.informations.link.x" icon="i-simple-icons-x" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.x" target="_blank" />
                         <UButton v-if="page.informations.link.linkedin" icon="i-simple-icons-linkedin" size="xl" color="gray" variant="ghost"

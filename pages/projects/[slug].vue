@@ -14,6 +14,7 @@ const links = [{
   icon: 'i-heroicons-square-3-stack-3d'
 }, {
   label: page.value ? page.value.title : 'Random',
+  icon: "material-symbols:article"
 }]
 
 

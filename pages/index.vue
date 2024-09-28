@@ -39,7 +39,7 @@ useSeoMeta({
             </div>
 
         </div>
-        <UDivider class="py-20" id="projects" />
+        <UDivider class="py-14 lg:py-20" id="projects" />
         <div class="mb-10 md:mb-20">
             <h2 class="text-4xl font-bold mb-10">Projects</h2>
             <div class="grid md:grid-cols-2 gap-10">
