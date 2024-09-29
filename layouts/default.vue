@@ -31,7 +31,7 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
                             :to="page.informations.link.instagram" target="_blank" />
                         <UButton v-if="page.informations.link.github" icon="i-simple-icons-github" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.github" target="_blank" />
-                        <UButton v-if="page.informations.link.kaggle" icon="i-simple-icons-kaggle" size="xl" color="gray" variant="ghost"
+                        <UButton v-if="page.informations.link.kaggle" icon="cib:kaggle" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.kaggle" target="_blank" />
 
                     </div>
