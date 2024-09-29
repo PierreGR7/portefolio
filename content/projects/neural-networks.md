@@ -7,7 +7,7 @@ authors:
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
-  src: img/cover_neural_networks.png
+  src: img/article_neural_networks/cover_neural_networks.png
 date: 2024-09-25T00:00:00.000Z
 badge:
   label: Machine Learning, Mathematics, Data Science
