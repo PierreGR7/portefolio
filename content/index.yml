@@ -1,0 +1,18 @@
+title: "Pierre Graef - Data Scientist"
+description: ""
+
+informations:
+  name: "Pierre Graef"
+  job: "Data Scientist"
+  availability: true
+  email: "graef.pierre@gmail.com"
+  link: 
+    x: ""
+    linkedin: "https://www.linkedin.com/in/pierre-graef-6001b0208/"
+    instagram: ""
+    github: "https://github.com/PierreGR7"
+    kaggle: "https://www.kaggle.com/pierregraef"
+  profile:
+    url: "https://media.licdn.com/dms/image/v2/D4E03AQFXvgbIXDaosA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727563786674?e=1733356800&v=beta&t=XWRbCX3VeED2VF8RmAfzXKMw1q1iauxcD5xahtjNumU"
+  skills: "Python | R | SQL | Power BI"
+  description : "I am a results-oriented data analyst, skilled in advanced analytics and proficient in programming languages (like Python, R, SQL) and other analytics toolkits (like Power BI, Excel). With a proven track record of translating raw data into actionable insights, I consistently deliver impactful outcomes. My proven ability to transform complex datasets into valuable information has played a pivotal role in facilitating informed decision-making processes."
