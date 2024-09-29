@@ -69,19 +69,19 @@ This article presents the project in a polished, professional manner. Contact me
   
   A pie chart displaying the distribution of cars by maker shows that a handful of brands dominate the dataset. Maruti Suzuki, Hyundai, and Honda lead in terms of volume. These brands offer a high number of vehicles, reflecting their strong market presence.
   
-  Photo 2
+  ![graph2.png](/img/article_vehicules/graph2.png)
   
   #### **Cars Distribution by Price**
   
   The distribution of car prices reveals that the majority of cars are priced below 1 million units of unknown currency. The data shows that most cars are clustered around half a million, with a few outliers priced significantly higher. This suggests that luxury cars have a limited yet significant presence in the dataset.
   
-  Photo 3
+  ![graph3.png](/img/article_vehicules/graph3.png)
   
   #### **Average Car Price by Maker**
   
   Among makers with at least 50 cars in the dataset, Mercedes-Benz, BMW, and Audi command the highest average prices. These brands are known for their luxury vehicles, reflecting their premium pricing strategy. On the other hand, Hyundai and Maruti Suzuki offer more affordable vehicles, driving higher sales volumes at lower price points.
   
-  Photo 4
+  ![graph4.png](/img/article_vehicules/graph4.png)
   
   ### **Market Strategy Analysis**
   
@@ -91,19 +91,19 @@ This article presents the project in a polished, professional manner. Contact me
   
   Mercedes-Benz leads the market with nearly 750 million in total sales, followed by BMW and Audi. Interestingly, Hyundai and Maruti Suzuki also feature in the top 10, despite their lower average prices, thanks to their high volume of vehicle sales.
   
-  Photo 5 (comparaison avec average car price by maker)
+  ![graph5.png](/img/article_vehicules/graph5.png)
   
   #### **Market Share Analysis**
   
   A donut chart visualizing market share shows that the top 10 brands collectively control a larger portion of the market compared to the remaining 23 brands. Mercedes-Benz holds nearly 15% of the total market share in terms of sales.
   
-  Photo 6
+  ![graph6.png](/img/article_vehicules/graph6.png)
   
   #### Top 15 Brands by Total Sales vs. Total Vehicles Sold
   
   This chart offers insights into the different strategies these brands use in the market. While some focus on high volume at lower prices (e.g., Hyundai, Maruti Suzuki), others focus on luxury and higher pricing with lower volume (e.g., Mercedes-Benz, Audi, BMW).
   
-  Photo 7
+  ![graph7.png](/img/article_vehicules/graph7.png)
   
   ### **Key Insights & Conclusion**
   
