@@ -37,16 +37,16 @@ An activation function introduces the non-linearity required to model complex re
 
 Training a neural network involves using the backpropagation algorithm. This process relies on computing the gradient of the errors with respect to the network's weights through the **gradient descent** algorithm. Here are the main steps:
 
-- **Forward pass:**  The data passes through the network layer by layer, and the output is calculated.
+**Forward pass:**  The data passes through the network layer by layer, and the output is calculated.
 
 ::inline
-* **Error calculation**: A loss function\:latex{latex="(J(\theta))"}, such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance, where\:latex{latex="(y\_i)"}is the true value, and\:latex{latex="(\hat{y}\_i )"}is the prediction :
+**Error calculation**: A loss function :latex{latex="\(J(\theta)\)"}, such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance, where :latex{latex="\(y_i\)"}is the true value, and :latex{latex="\(\hat{y}_i \)"} is the prediction :
 ::
 
 ::latex{latex="\[J(\theta) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2\]"}
 ::
 
-- **Backpropagation**: Through differentiation, the gradient of the loss function is computed for each weight using the **chain rule** :
+**Backpropagation**: Through differentiation, the gradient of the loss function is computed for each weight using the **chain rule** :
 
 ::latex
 ---
