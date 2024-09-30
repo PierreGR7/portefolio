@@ -1,6 +1,12 @@
-<script setup lang="ts">
+<script setup>
 const route = useRoute()
 import { withoutTrailingSlash } from 'ufo'
+
+
+onMounted(() => {
+  MathJax.typeset();
+});
+
 
 const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
 
@@ -39,13 +45,13 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
       <ContentRenderer v-if="page && page.body" :value="page" />
     </UPageBody> -->
 
-    <UPage>
-      <UPageBody prose>
+    <UPage class="relative">
+      <UPageBody prose >
         <ContentRenderer v-if="page && page.body" :value="page" />
 
         <hr v-if="surround?.length">
 
-        <UContentSurround :surround="surround" />
+        <UContentSurround :surround="surround"  />
       </UPageBody>
 
       <template #right>

@@ -12,8 +12,6 @@ const props = defineProps({
 });
 
 
-onMounted(() => {
-  MathJax.typeset();
-});
+
 
 </script>
