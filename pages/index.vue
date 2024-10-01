@@ -42,7 +42,7 @@ useSeoMeta({
         <UDivider class="py-14 lg:py-20" id="projects" />
         <div class="mb-10 md:mb-20">
             <h2 class="text-4xl font-bold mb-10">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-10">
+            <div class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-16">
                 <UBlogPost v-for="(project, index) in projects" :key="index" :title="project.title" :to="project._path"
                     :badge="project.badge" :description="project.description" :image="project.image"
                     :date="new Date(project.date).toLocaleDateString('fr-FR')" />
