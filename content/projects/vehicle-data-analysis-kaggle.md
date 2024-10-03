@@ -40,7 +40,7 @@ To visualize the distribution of cars by their manufacturing year, a bar plot wa
 
 Here’s an example of my code. To highlight the years with the highest concentration of cars, I applied a normalization technique to scale the values. This allowed me to create a custom color palette where darker shades represent higher concentrations :
 
-```python
+```js
 # Plotting the number of cars per year using a bar plot
 # This shows how many cars were made each year in the dataset
 
