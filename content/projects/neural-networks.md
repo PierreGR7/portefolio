@@ -9,8 +9,6 @@ authors:
 image:
   src: img/article_neural_networks/cover_neural_networks.png
 date: 2024-09-25T00:00:00.000Z
-badge:
-  label: Machine Learning, Mathematics, Data Science
 ---
 
 ## Neural Networks: A Technical Overview
