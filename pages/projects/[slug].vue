@@ -54,9 +54,9 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
         <UContentSurround :surround="surround"  />
       </UPageBody>
 
-      <template #right>
+      <!-- <template #right>
         <UContentToc v-if="page && page.body && page.body.toc" :links="page.body.toc.links" />
-      </template>
+      </template> -->
     </UPage>
 
   </UPage>
