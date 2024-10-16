@@ -41,13 +41,10 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
         <UBreadcrumb :links="links" />
       </template>
     </UPageHeader>
-    <!-- <UPageBody prose>
-      <ContentRenderer v-if="page && page.body" :value="page" />
-    </UPageBody> -->
 
     <UPage class="relative">
       <UPageBody prose >
-        <ContentRenderer v-if="page && page.body" :value="page" />
+        <ContentRenderer class="content-renderer" v-if="page && page.body" :value="page" />
 
         <hr v-if="surround?.length">
 
@@ -61,3 +58,11 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
 
   </UPage>
 </template>
+
+<style>
+
+.content-renderer img{
+  @apply mx-auto rounded-lg shadow-lg
+}
+
+</style>
