@@ -1,5 +1,5 @@
 ---
-title: Clustering - Customer Personnality (K-means/PCA)
+title: Clustering - Customer Personality (K-means/PCA)
 description: Business analysis of a company’s ideal customers
 authors:
   - name: Pierre Graef
