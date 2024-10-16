@@ -13,7 +13,7 @@ date: 2024-10-10T00:00:00.000Z
 
 In this project, we perform a **Customer Personality Analysis** to gain insights into the customer base of a company, using data provided from a kaggle dataset. You can find, download and modify all my code on my Kaggle :
 
-[Clustering :  Customer Personnality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook)
+[Clustering :  Customer Personality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook)
 
 Understanding customer personalities helps businesses tailor their products and services to meet specific customer needs. By analyzing demographic, purchasing, and behavioral data, companies can segment their customers more effectively, improving marketing strategies, boosting sales, and enhancing overall customer satisfaction.
 
