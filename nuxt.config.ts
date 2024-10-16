@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   modules: ['@nuxt/content', '@nuxt/ui', '@nuxt/image','@nuxthq/studio'],
   colorMode: {
-    preference: 'dark'
+    preference: 'light'
   },
   nitro: {
     static: true,
