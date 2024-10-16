@@ -1,5 +1,5 @@
 ---
-title: Introduction to Neural Networks
+title: Neural Networks
 description: Mathematics Behind Neural Networks
 authors:
   - name: Pierre Graef
@@ -8,7 +8,7 @@ authors:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: img/article_neural_networks/cover_neural_networks.png
-date: 2024-09-25T00:00:00.000Z
+date: 2024-09-10T00:00:00.000Z
 ---
 
 ## Neural Networks: A Technical Overview

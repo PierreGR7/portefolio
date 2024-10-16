@@ -13,15 +13,15 @@ date: 2024-10-10T00:00:00.000Z
 
 In this project, we perform a **Customer Personality Analysis** to gain insights into the customer base of a company, using data provided from a kaggle dataset. You can find, download and modify all my code on my Kaggle :
 
-[Clustering :  Customer Personality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook)
+[Clustering :  Customer Personality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook){:target="_blank"}
 
 Understanding customer personalities helps businesses tailor their products and services to meet specific customer needs. By analyzing demographic, purchasing, and behavioral data, companies can segment their customers more effectively, improving marketing strategies, boosting sales, and enhancing overall customer satisfaction.
 
 The primary objective of this analysis is to identify **customer segments** based on their purchasing habits and demographics. This segmentation will allow for more targeted marketing campaigns and better product recommendations. Using techniques like **exploratory data analysis (EDA)** and **clustering algorithms**, we will uncover key patterns and divide the customer base into distinct groups that exhibit similar behaviors.
 
-## Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis
 
-### Elbow Method for Determining Optimal Clusters
+### Elbow Method for determining optimal clusters
 
 The **Elbow Method** is a technique used to determine the optimal number of clusters (K) for K-Means clustering. The goal is to choose a K value that minimizes the sum of squared distances between each point and its assigned cluster center, known as the **Sum of Squared Errors (SSE)**.
 
@@ -48,4 +48,4 @@ The **elbow point** indicates where adding more clusters doesn't significantly i
 # python code
 ```
 
-####
+#### Soon...

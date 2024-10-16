@@ -8,7 +8,7 @@ authors:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: /img/article_vehicules/cover_image.png
-date: 2024-08-25T00:00:00.000Z
+date: 2024-09-25T00:00:00.000Z
 ---
 
 In this project, I will analyze a [vehicle dataset available on Kaggle](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho){:target="_blank"}, focusing on exploring market trends through **data visualization** and developing a **predictive model** using training and test datasets.
@@ -21,7 +21,7 @@ In this project, I analyzed a vehicle dataset from Kaggle to uncover market tren
 
 You can find, download and modify all my code on my Kaggle :
 
-[Visualizations : What is the best market strategy](https://www.kaggle.com/code/pierregraef/visualizations-what-is-the-best-market-strategy)
+[Visualizations : What is the best market strategy](https://www.kaggle.com/code/pierregraef/visualizations-what-is-the-best-market-strategy){:target="_blank"}
 
 ### **Data Overview and cleaning**
 
