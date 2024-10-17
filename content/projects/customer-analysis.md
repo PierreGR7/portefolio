@@ -21,6 +21,63 @@ The primary objective of this analysis is to identify **customer segments** base
 
 ## Exploratory Data Analysis
 
+Before diving into clustering, it’s essential to understand the structure of the data. The EDA provides a clear picture of the customer base's demographics, income distribution, and spending patterns.
+
+![dataset1.png](/img/article_customer/dataset1.png)
+
+### Age Distribution
+
+The dataset contains customers with a wide age range. To better visualize this, I plotted a histogram of the age distribution.
+
+![AgeDistribution2.png](/img/article_customer/AgeDistribution2.png)
+
+_Insight_: The age distribution shows that most customers are aged between 40 and 65, with very few customers older than 80.
+
+###
+
+### Income Distribution (After Removing Outliers)
+
+To visualize the income distribution, we plotted the customers whose income is below 100,000.
+
+![IncomeDistribution3.png](/img/article_customer/IncomeDistribution3.png)
+
+_Insight_: A very small percentage of customers (0.54%) have an income exceeding 100,000, which are treated as outliers.
+
+Next, I removed outliers for income values above 300,000 and age values above 90, which helped focus the analysis on more realistic customer profiles.
+
+### Spending Patterns on Products
+
+We will analyze how much customers spend across various product categories
+
+![DistributionSpending4.png](/img/article_customer/DistributionSpending4.png)
+
+## Preprocessing Data
+
+### Feature Engineering
+
+Several features were engineered to enhance our model. Here are a few important features:
+
+```js
+df_cust['Family_Size'] = df_cust['Kidhome'] + df_cust['Teenhome']
+df_cust['Avg_Spend_Per_Purchase'] = df_cust['Total_Spend'] / (
+    df_cust['NumDealsPurchases'] + df_cust['NumWebPurchases'] + df_cust['NumCatalogPurchases'] + df_cust['NumStorePurchases'])
+df_cust['Wine_Ratio'] = df_cust['MntWines'] / df_cust['Total_Spend']
+```
+
+These features allow us to delve deeper into customer behavior, such as family size and spending habits.
+
+### Correlations
+
+![Correlation5.png](/img/article_customer/Correlation5.png)
+
+Exemple of insights :
+
+NumDealsPurchases and Income (-0.11): This slightly negative correlation shows that higher-income customers tend to be less interested in purchasing via discounts, possibly indicating price insensitivity
+
+## Clustering
+
+We employed K-Means clustering to segment the customer base. First, the **Elbow Method** was used to determine the optimal number of clusters:
+
 ### Elbow Method for determining optimal clusters
 
 The **Elbow Method** is a technique used to determine the optimal number of clusters (K) for K-Means clustering. The goal is to choose a K value that minimizes the sum of squared distances between each point and its assigned cluster center, known as the **Sum of Squared Errors (SSE)**.
@@ -42,10 +99,36 @@ latex: \[ SSE = \sum_{i=1}^{n} \sum_{j=1}^{k} \min(||x_i - \mu_j||^2) \]
 
 We want to minimize the squared Euclidean distance between the data point x and its closest cluster centroid.
 
-The **elbow point** indicates where adding more clusters doesn't significantly improve the model, balancing model complexity and SSE reduction.
+![ElbowMethod6.png](/img/article_customer/ElbowMethod6.png)
+
+The **Elbow Method** suggested that 3 clusters would be optimal. After determining the number of clusters, K-Means was applied.
 
 ```js
-# python code
+kmeans = KMeans(n_clusters=3, random_state=42)
+df_cust['Cluster'] = kmeans.fit_predict(scaled_df)
 ```
 
-#### Soon...
+Here's the plot of unclustered points :
+
+![ClustersOfCustomers7.png](/img/article_customer/ClustersOfCustomers7.png)
+
+### PCA and Clustering Comparison
+
+To improve clustering performance and visualization, I applied **Principal Component Analysis (PCA)** to reduce the dataset’s dimensionality :
+
+![WithPCAWithout8.png](/img/article_customer/WithPCAWithout8.png)
+
+_Comparison of Clustering with and without PCA_:
+
+- **Silhouette Score (be close to 1)**:\* Without PCA: 0.31
+  * With PCA: 0.40
+- **Davies-Bouldin Index (be close to 0)**:\* Without PCA: 1.19
+  * With PCA: 0.88
+- **Calinski-Harabasz Score (highest)**:\* Without PCA: 1075.85
+  * With PCA: 2133.39
+
+## Customer Segmentation
+
+Based on the clusters formed, the customer segments were analyzed for their demographics and spending habits.
+
+![ClusterAnalysisV2.png](/img/article_customer/ClusterAnalysisV2.png)
