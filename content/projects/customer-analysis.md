@@ -11,11 +11,13 @@ image:
 date: 2024-10-10T00:00:00.000Z
 ---
 
-In this project, we perform a **Customer Personality Analysis** to gain insights into the customer base of a company, using data provided from a kaggle dataset. You can find, download and modify all my code on my Kaggle :
+Wondering how to segment your customers using raw data? In this article, I’ll show you how to create customer clusters based on personality profiles and tailor your marketing strategies for each segment. Let’s dive into data-driven insights!
+
+![Intro0V2.png](/img/article_customer/Intro0V2.png)
+
+We perform a **Customer Personality Analysis** to gain insights into the customer base of a company, using data provided from a kaggle dataset. You can find, download and modify all my code on my Kaggle :
 
 [Clustering :  Customer Personality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook){:target="_blank"}
-
-Understanding customer personalities helps businesses tailor their products and services to meet specific customer needs. By analyzing demographic, purchasing, and behavioral data, companies can segment their customers more effectively, improving marketing strategies, boosting sales, and enhancing overall customer satisfaction.
 
 The primary objective of this analysis is to identify **customer segments** based on their purchasing habits and demographics. This segmentation will allow for more targeted marketing campaigns and better product recommendations. Using techniques like **exploratory data analysis (EDA)** and **clustering algorithms**, we will uncover key patterns and divide the customer base into distinct groups that exhibit similar behaviors.
 
@@ -120,15 +122,30 @@ To improve clustering performance and visualization, I applied **Principal Compo
 
 _Comparison of Clustering with and without PCA_:
 
-- **Silhouette Score (be close to 1)**:\* Without PCA: 0.31
-  * With PCA: 0.40
-- **Davies-Bouldin Index (be close to 0)**:\* Without PCA: 1.19
-  * With PCA: 0.88
-- **Calinski-Harabasz Score (highest)**:\* Without PCA: 1075.85
-  * With PCA: 2133.39
+- **Silhouette Score (be close to 1)**::brWithout PCA: 0.31 :br-with PCA: 0.40
+- **Davies-Bouldin Index (be close to 0)**::brWithout PCA: 1.19 :br-with PCA: 0.88
+- **Calinski-Harabasz Score (highest)**::brWithout PCA: 1075.85 :br-with PCA: 2133.39
 
 ## Customer Segmentation
 
 Based on the clusters formed, the customer segments were analyzed for their demographics and spending habits.
 
 ![ClusterAnalysisV2.png](/img/article_customer/ClusterAnalysisV2.png)
+
+## Marketing Recommendations
+
+The final step is generating marketing recommendations based on the insights from each cluster:
+
+![TotalCampaigns9.png](/img/article_customer/TotalCampaigns9.png)
+
+- **Cluster 0 (Mid-Range Spenders)**: Focus on **value-based promotions** such as bundled deals and loyalty programs.
+- **Cluster 1 (Low Spenders, Younger)**: Target these customers with **price-sensitive promotions** like discounts on frequently purchased items.
+- **Cluster 2 (High Spenders)**: Offer **premium products** and personalized campaigns focused on luxury items and VIP experiences.
+
+## _General Recommendation_
+
+Tailor marketing strategies to fit each segment's spending patterns and preferences, such as offering premium products to high spenders or discounts to more price-sensitive customers.
+
+## Conclusion
+
+This project showcased the power of customer segmentation through clustering. By understanding each customer segment’s income, spending patterns, and demographics, businesses can create more effective marketing strategies and enhance customer satisfaction.
