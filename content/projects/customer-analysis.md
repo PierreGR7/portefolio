@@ -122,9 +122,23 @@ To improve clustering performance and visualization, I applied **Principal Compo
 
 _Comparison of Clustering with and without PCA_:
 
-- **Silhouette Score (be close to 1)**::brWithout PCA: 0.31 :br-with PCA: 0.40
-- **Davies-Bouldin Index (be close to 0)**::brWithout PCA: 1.19 :br-with PCA: 0.88
-- **Calinski-Harabasz Score (highest)**::brWithout PCA: 1075.85 :br-with PCA: 2133.39
+**Silhouette Score (be close to 1)**
+
+Without PCA: 0.31
+
+With PCA: 0.40
+
+**Davies-Bouldin Index (be close to 0)**
+
+Without PCA: 1.19
+
+With PCA: 0.88
+
+**Calinski-Harabasz Score (highest)**
+
+Without PCA: 1075.85
+
+With PCA: 2133.39
 
 ## Customer Segmentation
 
