@@ -52,6 +52,8 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
                 </p>
             </div>
         </div>
+        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2024/10/25/07/20241025073130-UF7G5WKE.js"></script>
     </div>
 </template>
 
