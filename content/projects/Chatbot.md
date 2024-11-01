@@ -8,14 +8,14 @@ authors:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: /img/Article IA Chatbot/article_chatbot.png
-date: '2024-10-10T00:00:00.000Z'
+date: 2024-10-31T01:00:00.000Z
 ---
 
 Have you noticed the little green tab in the bottom right corner? It’s my chatbot, and I invite you to give it a try before diving into this article!
 
 Looking to create a personal AI assistant to engage visitors on your website? In this article, I’ll walk you through the process of designing, developing, and deploying an interactive chatbot on my portfolio site. Let’s dive into the creation of a seamless AI experience!
 
-![article_chatbot.png](/img/Article%20IA%20Chatbot/article_chatbot.png)
+![article\_chatbot.png](/img/Article%20IA%20Chatbot/article_chatbot.png)
 
 Creating an **AI Chatbot** for my portfolio site was a strategic move to offer visitors a guided and interactive experience. Using Botpress, I designed and coded a custom chatbot that can answer common questions about my profile, projects, and career background. Here’s a step-by-step breakdown of how I brought this idea to life.
 
@@ -50,7 +50,6 @@ The chatbot is designed to provide:
 - **Career Information**: Users can inquire about my academic background, professional skills, and certifications.
 - **Project Insights**: The bot can give a summary of major projects and guide users to relevant project pages.
 - **Personalized Assistance**: For specific queries, the chatbot can offer my contact information or link directly to my email.
-
 
 ## AI Spending Limit Handling
 
