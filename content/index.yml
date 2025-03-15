@@ -1,18 +1,17 @@
-title: "Pierre Graef - Data Scientist"
-description: ""
-
+title: Pierre Graef - Data Engineer
+description: ''
 informations:
-  name: "Pierre Graef"
-  job: "Data Scientist"
+  name: Pierre Graef
+  job: Data Engineer
   availability: true
-  email: "graef.pierre@gmail.com"
-  link: 
-    x: ""
-    linkedin: "https://www.linkedin.com/in/pierre-graef"
-    instagram: ""
-    github: "https://github.com/PierreGR7"
-    kaggle: "https://www.kaggle.com/pierregraef"
+  email: graef.pierre@gmail.com
+  link:
+    x: ''
+    linkedin: https://www.linkedin.com/in/pierre-graef
+    instagram: ''
+    github: https://github.com/PierreGR7
+    kaggle: https://www.kaggle.com/pierregraef
   profile:
-    url: "https://media.licdn.com/dms/image/v2/D4E03AQF80WSBHoUwdw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728399393063?e=1741824000&v=beta&t=5bYIsYInnaCtTNHd3zFDXNTXDZTBqJLAcZYcrttjnas"
-  skills: "Python | R | SQL | Power BI | AWS"
-  description: "I am a technically-driven data scientist, specializing in advanced machine learning models and AI with strong expertise in Python, SQL and R for building and optimizing predictive models. I leverage tools like Power BI to not only visualize complex data but also craft compelling stories that guide strategic decision-making. With experience working on international projects, I bring a global perspective and a proven ability to turn large datasets into actionable insights that drive meaningful results."
+    url: https://media.licdn.com/dms/image/v2/D4E03AQF80WSBHoUwdw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728399393063?e=1741824000&v=beta&t=5bYIsYInnaCtTNHd3zFDXNTXDZTBqJLAcZYcrttjnas
+  skills: Python | SQL | Talend | Power BI | Fabric
+  description: I am a Data Engineer specializing in data architecture, ETL pipelines, and cloud integration. Proficient in Python, SQL, and Microsoft Fabric, I design scalable data systems, optimize workflows, and build insightful dashboards with Power BI. With international experience, I transform complex datasets into actionable business solutions.
