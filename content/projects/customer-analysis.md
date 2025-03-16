@@ -3,12 +3,12 @@ title: Clustering - Customer Personality (K-means/PCA)
 description: Business analysis of a company’s ideal customers
 authors:
   - name: Pierre Graef
-    to: null
+    to: ""
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: /img/article_customer/customer_cover.png
-date: 2024-10-10T00:00:00.000Z
+date: 2025-01-20T00:00:00.000Z
 ---
 
 Wondering how to segment your customers using raw data? In this article, I’ll show you how to create customer clusters based on personality profiles and tailor your marketing strategies for each segment. Let’s dive into data-driven insights!
@@ -17,7 +17,7 @@ Wondering how to segment your customers using raw data? In this article, I’ll 
 
 We perform a **Customer Personality Analysis** to gain insights into the customer base of a company, using data provided from a kaggle dataset. You can find, download and modify all my code on my Kaggle :
 
-[Clustering :  Customer Personality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook){:target="_blank"}
+[Clustering : Customer Personality (K-means/PCA)](https://www.kaggle.com/code/pierregraef/clustering-customer-personnality-k-means-pca/notebook){:target="_blank"}
 
 The primary objective of this analysis is to identify **customer segments** based on their purchasing habits and demographics. This segmentation will allow for more targeted marketing campaigns and better product recommendations. Using techniques like **exploratory data analysis (EDA)** and **clustering algorithms**, we will uncover key patterns and divide the customer base into distinct groups that exhibit similar behaviors.
 
@@ -33,7 +33,7 @@ The dataset contains customers with a wide age range. To better visualize this, 
 
 ![AgeDistribution2.png](/img/article_customer/AgeDistribution2.png)
 
-_Insight_: The age distribution shows that most customers are aged between 40 and 65, with very few customers older than 80.
+*Insight*: The age distribution shows that most customers are aged between 40 and 65, with very few customers older than 80.
 
 ###
 
@@ -43,7 +43,7 @@ To visualize the income distribution, we plotted the customers whose income is b
 
 ![IncomeDistribution3.png](/img/article_customer/IncomeDistribution3.png)
 
-_Insight_: A very small percentage of customers (0.54%) have an income exceeding 100,000, which are treated as outliers.
+*Insight*: A very small percentage of customers (0.54%) have an income exceeding 100,000, which are treated as outliers.
 
 Next, I removed outliers for income values above 300,000 and age values above 90, which helped focus the analysis on more realistic customer profiles.
 
@@ -120,7 +120,7 @@ To improve clustering performance and visualization, I applied **Principal Compo
 
 ![WithPCAWithout8.png](/img/article_customer/WithPCAWithout8.png)
 
-_Comparison of Clustering with and without PCA_:
+*Comparison of Clustering with and without PCA*:
 
 **Silhouette Score (be close to 1)**
 
@@ -156,7 +156,7 @@ The final step is generating marketing recommendations based on the insights fro
 - **Cluster 1 (Low Spenders, Younger)**: Target these customers with **price-sensitive promotions** like discounts on frequently purchased items.
 - **Cluster 2 (High Spenders)**: Offer **premium products** and personalized campaigns focused on luxury items and VIP experiences.
 
-## _General Recommendation_
+## *General Recommendation*
 
 Tailor marketing strategies to fit each segment's spending patterns and preferences, such as offering premium products to high spenders or discounts to more price-sensitive customers.
 

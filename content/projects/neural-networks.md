@@ -8,7 +8,7 @@ authors:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: img/article_neural_networks/cover_neural_networks.png
-date: 2024-09-10T00:00:00.000Z
+date: 2024-10-10T00:00:00.000Z
 ---
 
 ## Neural Networks: A Technical Overview
@@ -27,18 +27,24 @@ A neural network is composed of several layers:
 
 An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
 
-- **Sigmoid**:latex{latex="\[\sigma(x) = \frac{1}{1 + e^{-x}} \]"} It constrains outputs between 0 and 1, but suffers from saturation at extreme values.
-- **ReLU (Rectified Linear Unit)**:latex{latex="\[f(x) = \max(0, x)\]"}It's simple to compute and helps avoid gradient saturation issues, but it may cause "dead" neurons.
-- **Tanh (Hyperbolic Tangent)**:latex{latex="\[\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\]"}Values range between -1 and 1, but like sigmoid, it can also saturate.
+- **Sigmoid**
+  :latex{latex="\[\sigma(x) = \frac{1}{1 + e^{-x}} \]"}
+  It constrains outputs between 0 and 1, but suffers from saturation at extreme values.
+- **ReLU (Rectified Linear Unit)**
+  :latex{latex="\[f(x) = \max(0, x)\]"}
+  It's simple to compute and helps avoid gradient saturation issues, but it may cause "dead" neurons.
+- **Tanh (Hyperbolic Tangent)**
+  :latex{latex="\[\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\]"}
+  Values range between -1 and 1, but like sigmoid, it can also saturate.
 
 ### 3. Learning Algorithm: Backpropagation
 
 Training a neural network involves using the backpropagation algorithm. This process relies on computing the gradient of the errors with respect to the network's weights through the **gradient descent** algorithm. Here are the main steps:
 
-**Forward pass:**  The data passes through the network layer by layer, and the output is calculated.
+**Forward pass:** The data passes through the network layer by layer, and the output is calculated.
 
 ::inline
-**Error calculation**: A loss function :latex{latex="\(J(\theta)\)"}, such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance, where :latex{latex="\(y_i\)"}is the true value, and :latex{latex="\(\hat{y}_i \)"} is the prediction :
+**Error calculation**: A loss function :latex{latex="\(J(\theta)\)"} , such as Mean Squared Error (MSE) or Cross-Entropy, is used to evaluate performance, where :latex{latex="\(y_i\)"} is the true value, and :latex{latex="\(\hat{y}_i \)"} is the prediction :
 ::
 
 ::latex{latex="\[J(\theta) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2\]"}
@@ -48,7 +54,9 @@ Training a neural network involves using the backpropagation algorithm. This pro
 
 ::latex
 ---
-latex: \[ \frac{\partial J}{\partial w_{ij}} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z_j} \cdot \frac{\partial z_j}{\partial w_{ij}} \]
+latex: \[ \frac{\partial J}{\partial w_{ij}} = \frac{\partial J}{\partial
+  \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z_j} \cdot \frac{\partial
+  z_j}{\partial w_{ij}} \]
 ---
 ::
 

@@ -3,12 +3,12 @@ title: Vehicle Market Analysis - Visualization & Predictions
 description: Data analysis of a vehicle dataset of Kaggle
 authors:
   - name: Pierre Graef
-    to: null
+    to: ""
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: /img/article_vehicules/cover_image.png
-date: 2024-09-25T00:00:00.000Z
+date: 2024-11-16T00:00:00.000Z
 ---
 
 In this project, I will analyze a [vehicle dataset available on Kaggle](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho){:target="_blank"}, focusing on exploring market trends through **data visualization** and developing a **predictive model** using training and test datasets.

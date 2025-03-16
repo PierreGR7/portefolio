@@ -3,12 +3,12 @@ title: AI Chatbot Integration on my Portfolio
 description: Interactive assistant for portfolio exploration
 authors:
   - name: Pierre Graef
-    to: null
+    to: ""
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
   src: /img/Article IA Chatbot/article_chatbot.png
-date: 2024-10-31T01:00:00.000Z
+date: 2024-12-03T01:00:00.000Z
 ---
 
 Have you noticed the little green tab in the bottom right corner? It’s my chatbot, and I invite you to give it a try before diving into this article!
