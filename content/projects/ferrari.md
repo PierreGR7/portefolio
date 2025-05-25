@@ -84,5 +84,5 @@ Using **Streamlit**, I created a dashboard with multiple pages to explore Ferrar
 
 ## Project Links
 
-- GitHub repository: https\://github.com/PierreGR7/ferrari\_f1\_db.git
-- Live dashboard: https\://pierre-graef-scuderia-ferrari-dashboard.streamlit.app/
+- GitHub repository: <https://github.com/PierreGR7/ferrari_f1_db.git>
+- Live dashboard: <https://pierre-graef-scuderia-ferrari-dashboard.streamlit.app/>
