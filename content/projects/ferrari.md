@@ -80,7 +80,7 @@ Using **Streamlit**, I created a dashboard with multiple pages to explore Ferrar
 - **Top driver**: Michael Schumacher (72 wins with Ferrari)
 - **Most successful tracks**: Monza (Italy), Spa (Belgium), Silverstone (UK)
 
-![dashboard\_ferrari.png](/img/article_ferrari/dashboard-ferrari.png)
+![dashboard-ferrari.png](/img/article_ferrari/dashboard-ferrari.png)
 
 ## Project Links
 
