@@ -11,7 +11,11 @@ image:
 date: 2025-05-25T01:00:00.000Z
 ---
 
-As a lifelong Ferrari and Formula 1 enthusiast, I wanted to combine my passion for motorsports with my expertise in data engineering and data science. This project explores the **historical performance of Scuderia Ferrari** in Formula 1 from **1950 to today**, using real-world data to deliver insightful visualizations and interactive reporting tools.
+As a lifelong **Ferrari** and **Formula 1** enthusiast, this project is more than just a technical case study—it’s a tribute to a childhood passion.
+
+In 2023, I had the chance to visit **Maranello**, the heart of the Prancing Horse. Walking through the Ferrari Museum, seeing the legendary F1 cars up close, and breathing in decades of racing history lit a spark. I told myself: *why not merge my love for data with my love for Ferrari?* That’s how this project was born.
+
+This project explores the **historical performance of Scuderia Ferrari** in Formula 1 from **1950 to today**, using real-world data to deliver insightful visualizations and interactive reporting tools.
 
 Through this case study, I aimed to:
 
