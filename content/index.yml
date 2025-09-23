@@ -13,5 +13,5 @@ informations:
     kaggle: https://www.kaggle.com/pierregraef
   profile:
     url: https://media.licdn.com/dms/image/v2/D4E03AQF80WSBHoUwdw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728399393048?e=1753920000&v=beta&t=qsgOlSnvv-LqdeaAH8_JQTzzgLdAbBcnA2OTXTxhsKc
-  skills: Python | SQL | Talend | Fabric
-  description: I am a Data Engineer specializing in data architecture, ETL pipelines, and cloud integration. Proficient in Python, SQL, Talend, I design scalable data systems, optimize workflows, and build insightful dashboards with Power BI. With international experience, I transform complex datasets into actionable business solutions.
+  skills: Python | SQL | Spark | Airflow
+  description: I am a Data Engineer specializing in data architecture, ETL pipelines, and cloud integration. Proficient in Python, SQL, Spark, Airflow, I design scalable data systems, optimize workflows, and build insightful dashboards with Power BI. With international experience, I transform complex datasets into actionable business solutions.
