@@ -7,7 +7,7 @@ authors:
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
-  src: img/article_neural_networks/cover_neural_networks.png
+  src: img/article_neural_networks/cover-neural-networks.png.png
 date: 2024-10-10T00:00:00.000Z
 ---
 
@@ -27,15 +27,9 @@ A neural network is composed of several layers:
 
 An activation function introduces the non-linearity required to model complex relationships. Below are some common activation functions and their mathematical expressions:
 
-- **Sigmoid**
-  :latex{latex="\[\sigma(x) = \frac{1}{1 + e^{-x}} \]"}
-  It constrains outputs between 0 and 1, but suffers from saturation at extreme values.
-- **ReLU (Rectified Linear Unit)**
-  :latex{latex="\[f(x) = \max(0, x)\]"}
-  It's simple to compute and helps avoid gradient saturation issues, but it may cause "dead" neurons.
-- **Tanh (Hyperbolic Tangent)**
-  :latex{latex="\[\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\]"}
-  Values range between -1 and 1, but like sigmoid, it can also saturate.
+- **Sigmoid**:latex{latex="\[\sigma(x) = \frac{1}{1 + e^{-x}} \]"} It constrains outputs between 0 and 1, but suffers from saturation at extreme values.
+- **ReLU (Rectified Linear Unit)**:latex{latex="\[f(x) = \max(0, x)\]"} It's simple to compute and helps avoid gradient saturation issues, but it may cause "dead" neurons.
+- **Tanh (Hyperbolic Tangent)**:latex{latex="\[\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}\]"} Values range between -1 and 1, but like sigmoid, it can also saturate.
 
 ### 3. Learning Algorithm: Backpropagation
 
