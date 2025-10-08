@@ -7,7 +7,7 @@ authors:
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
-  src: /img/article_vehicules/cover_image.png
+  src: /img/article_vehicules/cover-image.png
 date: 2024-11-16T00:00:00.000Z
 ---
 
