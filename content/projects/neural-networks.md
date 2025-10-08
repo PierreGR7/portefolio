@@ -7,7 +7,7 @@ authors:
     avatar:
       src: https://i.pravatar.cc/128?u=2
 image:
-  src: img/article_neural_networks/cover-neural-networks.png.png
+  src: /img/article_neural_networks/cover-neural-networks.png
 date: 2024-10-10T00:00:00.000Z
 ---
 
