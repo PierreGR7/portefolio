@@ -1,5 +1,5 @@
 ---
-title: Scuderia Ferrari F1 - ETL to Dashboard (Python)
+title: Scuderia Ferrari F1 - ELT to Dashboard (Python)
 description: API, Sqlite and Streamlit
 authors:
   - name: Pierre Graef
@@ -56,7 +56,7 @@ WHERE constructorId = (SELECT constructorId FROM constructors WHERE name = 'Ferr
 GROUP BY year;
 ```
 
-## ETL Pipeline
+## ELT Pipeline
 
 The data pipeline is fully automated via Python scripts that:
 
