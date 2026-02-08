@@ -10,4 +10,12 @@ export default defineNuxtConfig({
   nitro: {
     static: true,
   },
+
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/portfolio_clear.png' }
+      ]
+    }
+  }
 })
