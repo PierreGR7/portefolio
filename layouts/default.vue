@@ -33,9 +33,20 @@ const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne
                             :to="page.informations.link.github" target="_blank" />
                         <UButton v-if="page.informations.link.kaggle" icon="cib:kaggle" size="xl" color="gray" variant="ghost"
                             :to="page.informations.link.kaggle" target="_blank" />
-
                     </div>
                 </div>
+
+                <div v-if="page.informations.experience?.length" class="mt-8 lg:mt-10 w-full">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4 text-center lg:text-right">Experience</p>
+                    <div class="space-y-4">
+                        <div v-for="(exp, i) in page.informations.experience" :key="i" class="text-center lg:text-right">
+                            <p class="font-semibold text-sm leading-tight">{{ exp.role }}</p>
+                            <p class="text-sm text-primary font-medium">{{ exp.company }}</p>
+                            <p class="text-xs text-gray-400 dark:text-gray-500">{{ exp.period }} · {{ exp.location }}</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="max-lg:hidden absolute bottom-6 right-1/2 translate-x-1/2">
                     <p> Copyright © {{ new Date().getFullYear() }}
                     </p>

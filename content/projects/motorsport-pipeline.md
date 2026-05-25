@@ -6,6 +6,8 @@ authors:
     to: ""
     avatar:
       src: https://i.pravatar.cc/128?u=2
+image:
+  src: /img/article_motorsport/cover.png
 date: 2026-03-26T00:00:00.000Z
 ---
 
