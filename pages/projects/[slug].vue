@@ -10,6 +10,17 @@ onMounted(() => {
 
 const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
 
+useSeoMeta({
+  title: page.value?.title ? `${page.value.title} — Pierre Graef` : 'Pierre Graef',
+  ogTitle: page.value?.title,
+  description: page.value?.description,
+  ogDescription: page.value?.description,
+  twitterCard: 'summary_large_image',
+  twitterTitle: page.value?.title,
+  twitterDescription: page.value?.description,
+  ogImage: page.value?.image?.src ?? undefined,
+})
+
 const links = [{
   label: 'Home',
   icon: 'i-heroicons-home',
@@ -51,9 +62,9 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
         <UContentSurround :surround="surround"  />
       </UPageBody>
 
-      <!-- <template #right>
-        <UContentToc v-if="page && page.body && page.body.toc" :links="page.body.toc.links" />
-      </template> -->
+      <template #right>
+        <UContentToc v-if="page && page.body && page.body.toc && page.body.toc.links.length" :links="page.body.toc.links" />
+      </template>
     </UPage>
 
   </UPage>
