@@ -16,15 +16,11 @@ informations:
   skills: Python | SQL | Spark | Airflow
   description: I am a Data Engineer specializing in data architecture, ETL pipelines, and cloud integration. Proficient in Python, SQL, Spark, Airflow, I design scalable data systems, optimize workflows, and build insightful dashboards with Power BI. With international experience, I transform complex datasets into actionable business solutions.
   experience:
-    - company: '[Entreprise 1]'
+    - company: '[CeA]'
       role: Data Engineer
       period: 2024 – Present
-      location: Paris, France
-    - company: '[Entreprise 2]'
-      role: Data Analyst
-      period: 2022 – 2024
-      location: '[Ville, Pays]'
-    - company: '[Entreprise 3]'
-      role: Data Analyst Intern
-      period: 2021 – 2022
-      location: '[Ville, Pays]'
+      location: Strasbourg, France
+    - company: '[Munich Re]'
+      role: Intern Data Analyst
+      period: 2024
+      location: '[Munich, Germany]'
