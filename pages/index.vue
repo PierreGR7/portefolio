@@ -5,17 +5,48 @@ const { data: projects } = await useAsyncData('projets', () => queryContent('/pr
     .sort({ date: -1 })
     .find())
 
+const { data: articles } = await useAsyncData('articles', () => queryContent('/articles')
+    .where({ _extension: 'md' })
+    .sort({ date: -1 })
+    .find())
+
 const {data: page} = await useAsyncData('index', () => queryContent(`/`).findOne())
+
+const shareImage = '/portfolio_clear.png'
 
 useSeoMeta({
   title: page.value?.title,
   ogTitle: page.value?.title,
   description: page.value?.description,
   ogDescription: page.value?.description,
-  twitterCard: 'summary',
+  ogImage: shareImage,
+  twitterImage: shareImage,
+  twitterCard: 'summary_large_image',
   twitterTitle: page.value?.title,
   twitterDescription: page.value?.description,
 })
+
+const toast = useToast()
+const email = page.value?.informations?.email
+const emailRevealed = ref(false)
+const copied = ref(false)
+
+async function revealEmail() {
+  emailRevealed.value = true
+  try {
+    await navigator.clipboard.writeText(email)
+    copied.value = true
+    toast.add({
+      title: 'Email copied!',
+      description: email,
+      icon: 'i-material-symbols-check-circle',
+      color: 'green',
+    })
+    setTimeout(() => (copied.value = false), 2000)
+  } catch (e) {
+    // Clipboard unavailable (e.g. non-secure context): email stays visible to copy manually
+  }
+}
 
 const skills = [
   { label: 'Python', icon: 'i-simple-icons-python' },
@@ -47,20 +78,38 @@ const skills = [
             <div class="flex flex-wrap gap-4">
                 <UButton icon="i-pepicons-pop-cv" :external="true" color="black" to="/pdf/CV_Pierre_Graef.pdf" size="xl"
                     label="My CV" target="_blank" />
-                <UButton icon="i-material-symbols-mail" :external="true" :to="`mailto:${page.informations.email}`" size="xl"
-                    label="Contact Me" />
+                <UButton v-if="!emailRevealed" icon="i-material-symbols-mail" size="xl"
+                    label="Contact Me" @click="revealEmail" />
+                <UButton v-else :icon="copied ? 'i-material-symbols-check-circle' : 'i-material-symbols-content-copy-outline'"
+                    color="gray" variant="soft" size="xl" :label="copied ? 'Email copied!' : email"
+                    @click="revealEmail" />
             </div>
         </div>
 
         <UDivider class="py-14 lg:py-20" id="projects" />
 
         <div class="mb-10 md:mb-20">
-            <h2 class="text-4xl font-bold mb-10">Projects</h2>
+            <h2 class="text-4xl font-bold mb-3">Projects</h2>
+            <p class="mb-10 text-gray-500 dark:text-gray-400">Hands-on data engineering builds — code, pipelines and dashboards.</p>
             <div class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-16">
                 <UBlogPost v-for="(project, index) in projects" :key="index" :title="project.title" :to="project._path"
                     :badge="project.badge" :description="project.description" :image="project.image"
                     :date="new Date(project.date).toLocaleDateString('fr-FR')" />
             </div>
         </div>
+
+        <template v-if="articles?.length">
+            <UDivider class="py-14 lg:py-20" id="articles" />
+
+            <div class="mb-10 md:mb-20">
+                <h2 class="text-4xl font-bold mb-3">Articles</h2>
+                <p class="mb-10 text-gray-500 dark:text-gray-400">Opinions, takes and news on data, AI and tech.</p>
+                <div class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-16">
+                    <UBlogPost v-for="(article, index) in articles" :key="index" :title="article.title" :to="article._path"
+                        :badge="article.badge" :description="article.description" :image="article.image"
+                        :date="new Date(article.date).toLocaleDateString('fr-FR')" />
+                </div>
+            </div>
+        </template>
     </div>
 </template>

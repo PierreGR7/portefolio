@@ -12,15 +12,15 @@ informations:
     github: https://github.com/PierreGR7
     kaggle: https://www.kaggle.com/pierregraef
   profile:
-    url: /img/profile.jpg
+    url: /img/profil.png
   skills: Python | SQL | Spark | Airflow
   description: I am a Data Engineer specializing in data architecture, ETL pipelines, and cloud integration. Proficient in Python, SQL, Spark, Airflow, I design scalable data systems, optimize workflows, and build insightful dashboards with Power BI. With international experience, I transform complex datasets into actionable business solutions.
   experience:
-    - company: '[CeA]'
+    - company: CeA
       role: Data Engineer
       period: 2024 – Present
       location: Strasbourg, France
-    - company: '[Munich Re]'
+    - company: Munich Re
       role: Intern Data Analyst
       period: 2024
-      location: '[Munich, Germany]'
+      location: Munich, Germany
