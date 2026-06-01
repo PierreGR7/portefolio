@@ -90,7 +90,7 @@ const skills = [
 
         <div class="mb-10 md:mb-20">
             <h2 class="text-4xl font-bold mb-3">Projects</h2>
-            <p class="mb-10 text-gray-500 dark:text-gray-400">Hands-on data engineering builds — code, pipelines and dashboards.</p>
+            <p class="mb-10 text-gray-500 dark:text-gray-400">Hands-on data engineering builds</p>
             <div class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-16">
                 <UBlogPost v-for="(project, index) in projects" :key="index" :title="project.title" :to="project._path"
                     :badge="project.badge" :description="project.description" :image="project.image"
@@ -103,7 +103,7 @@ const skills = [
 
             <div class="mb-10 md:mb-20">
                 <h2 class="text-4xl font-bold mb-3">Articles</h2>
-                <p class="mb-10 text-gray-500 dark:text-gray-400">Opinions, takes and news on data, AI and tech.</p>
+                <p class="mb-10 text-gray-500 dark:text-gray-400">Opinions, takes and news on data, AI and tech</p>
                 <div class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-16">
                     <UBlogPost v-for="(article, index) in articles" :key="index" :title="article.title" :to="article._path"
                         :badge="article.badge" :description="article.description" :image="article.image"
