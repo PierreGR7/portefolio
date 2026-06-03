@@ -43,6 +43,13 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
   .sort({ date: -1 })
   .findSurround(withoutTrailingSlash(route.path))
   , { default: () => [] })
+
+// Don't suggest the same article in the other language as prev/next.
+const cleanSurround = computed(() =>
+  (surround.value || []).map(item =>
+    item && item._path === page.value?.translationPath ? null : item
+  )
+)
 </script>
 
 <template>
@@ -55,11 +62,24 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
 
     <UPage class="relative">
       <UPageBody prose >
+        <div v-if="page?.translationPath" class="not-prose flex justify-end mb-6">
+          <UButtonGroup size="sm">
+            <UButton icon="i-circle-flags-uk" label="English"
+              :color="page.lang === 'en' ? 'primary' : 'gray'"
+              :variant="page.lang === 'en' ? 'solid' : 'soft'"
+              :to="page.lang === 'en' ? undefined : page.translationPath" />
+            <UButton icon="i-circle-flags-fr" label="Français"
+              :color="page.lang === 'fr' ? 'primary' : 'gray'"
+              :variant="page.lang === 'fr' ? 'solid' : 'soft'"
+              :to="page.lang === 'fr' ? undefined : page.translationPath" />
+          </UButtonGroup>
+        </div>
+
         <ContentRenderer class="content-renderer" v-if="page && page.body" :value="page" />
 
-        <hr v-if="surround?.length">
+        <hr v-if="cleanSurround?.length">
 
-        <UContentSurround :surround="surround"  />
+        <UContentSurround :surround="cleanSurround"  />
       </UPageBody>
 
       <template #right>

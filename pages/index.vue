@@ -5,8 +5,9 @@ const { data: projects } = await useAsyncData('projets', () => queryContent('/pr
     .sort({ date: -1 })
     .find())
 
+// Only list one card per article (hide alternate-language versions, e.g. *-fr).
 const { data: articles } = await useAsyncData('articles', () => queryContent('/articles')
-    .where({ _extension: 'md' })
+    .where({ _extension: 'md', lang: { $ne: 'fr' } })
     .sort({ date: -1 })
     .find())
 

@@ -9,6 +9,8 @@ authors:
 image:
   src: /img/article_opus/cover.svg
 date: 2026-06-01T01:00:00.000Z
+lang: en
+translationPath: /articles/opus-4-8-fr
 ---
 
 I've used a lot of LLMs as a daily tool for data work. Most of them share the same annoying habit: when they don't have enough to answer, they answer anyway. They round a half-formed thought up to a confident conclusion, and you only find out it was wrong once it has already cost you an hour.
